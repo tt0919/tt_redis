@@ -3,7 +3,7 @@
 import redis
 import time
 #sys.path.append()
-file=open('/program-file/tt/src/main/resources/pcapAnaly.txt','r')
+file=open('/program-file/tt/tt_pcap/src/main/resources/pcapAnaly.txt','r')
 #print file.readline()
 #file=open('/Users/admin/Downloads/pcap_analysis-master/tt/src/main/resources/test1.txt','r')
 
