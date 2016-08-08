@@ -1,9 +1,9 @@
 import redis
 import time
 #sys.path.append()
-file=open('/program-file/tt/src/main/resources/pcapAnaly.txt','r')
+file=open('/program-file/tt/src/main/resources/test.txt','r')
 #file=open('/Users/admin/Downloads/pcap_analysis-master/tt/src/main/resources/test1.txt','r')
-r = redis.StrictRedis(host='localhost', port=6379, db=5)
+r = redis.StrictRedis(host='localhost', port=6379, db=0)
 done=0
 count=1
 t = time.time()
