@@ -1,4 +1,4 @@
-
+#画图结果怪异有待改进
 import redis
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -14,7 +14,8 @@ for e in ls:
     for lt in r.hget(e,"sip"):
         G.add_edge(lt, r.hget(e,"dip"))
         arr1.append(e)
-
+print len(arr1)
+#len(arr1)=171130
 degree=G.degree()
 print len(degree)
 node_colors = []

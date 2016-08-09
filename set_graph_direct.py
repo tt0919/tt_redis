@@ -8,17 +8,59 @@ import numpy as np
 r = redis.Redis(host='127.0.0.1',port=6379,db=0)
 G = nx.Graph()
 ls = r.keys('*')
+count=0
 t = time.time()
+j=0
+"""
+
 for e in ls:
+    #count=0
     for lt in r.smembers(e):
         G.add_edge(e, lt)
+        #count+=1
+    #print e
+    #print str(j)+':'+str(count) #output degree for every pot
+    #j+=1
+
+#print count #output all degree =289 that is wrong
+"""
+
+
+t = time.time()
+level1 = []
+for e in ls:
+    for lt in r.smembers(e):
+        G.add_node(e)
+        G.add_node(lt)
+        level1.append(lt)
+print len(level1)
+print len(ls)
+level2 = []
+for i in level1:
+    for l in r.smembers(i):
+        if l in level1:
+            G.add_edge(i, l)
+            level2.append(l)
+
+nums = 0
+for i in ls:
+    if r.smembers(i) in level2:
+        nums += 1
+        if nums < 700:
+            for tt in r.smembers(i):
+                G.add_edge(i, tt)
+    else:
+        break
 
 degree=G.degree()
 print len(degree)
 node_colors = []
 
 for k,v in degree.items():
-    if k in ls:
+    #else:
+    if k in level2:
+        node_colors.append('b')
+    if k in level1:
         node_colors.append('r')
     else:
         node_colors.append('g')

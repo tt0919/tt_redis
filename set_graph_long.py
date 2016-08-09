@@ -13,14 +13,14 @@ level1 = []
 for e in ls:
     for lt in r.smembers(e):
         G.add_edge(e, lt)
-        level1.append(e)
+        level1.append(lt)
 print len(level1)
 level2 = []
 for i in ls:
     for l in r.smembers(i):
         if l in level1:
             G.add_edge(i, l)
-            level2.append(i)
+            level2.append(l)
 
 nums = 0
 for i in ls:
@@ -37,6 +37,9 @@ print len(degree)
 node_colors = []
 
 for k,v in degree.items():
+    #else:
+    if k in level2:
+        node_colors.append('b')
     if k in level1:
         node_colors.append('r')
     else:
