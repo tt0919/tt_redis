@@ -7,7 +7,7 @@ file=open('/program-file/tt/tt_pcap/src/main/resources/pcapAnaly.txt','r')
 #print file.readline()
 #file=open('/Users/admin/Downloads/pcap_analysis-master/tt/src/main/resources/test1.txt','r')
 
-r = redis.StrictRedis(host='localhost', port=6379, db=0)
+r = redis.StrictRedis(host='localhost', port=6379, db=1)
 done=0
 t = time.time()
 while not done:

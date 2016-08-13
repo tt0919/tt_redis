@@ -76,5 +76,10 @@ print time.time() - t
 plt.show()
 print time.time() - t
 
-
+print nx.degree_histogram(G)
+degree =  nx.degree_histogram(G)
+x = range(len(degree))
+y = [z / float(sum(degree)) for z in degree]
+plt.loglog(x,y,color="blue",linewidth=2)
+plt.show()
 
