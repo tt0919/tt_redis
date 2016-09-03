@@ -1,11 +1,12 @@
-#画图结果怪异有待改进
+# -*- coding: utf-8 -*
+# 画图结果怪异有待改进
 import redis
 import networkx as nx
 import matplotlib.pyplot as plt
 import time
 import numpy as np
 
-r = redis.Redis(host='127.0.0.1',port=6379,db=1)
+r = redis.Redis(host='127.0.0.1',port=6379,db=0)
 G = nx.Graph()
 ls = r.keys('*')
 arr1=[]

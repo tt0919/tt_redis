@@ -1,11 +1,11 @@
-
+# -*- coding: utf-8 -*
 import redis
 import networkx as nx
 import matplotlib.pyplot as plt
 import time
 import numpy as np
 
-r = redis.Redis(host='127.0.0.1',port=6379,db=0)
+r = redis.Redis(host='127.0.0.1',port=6379,db=1)
 G = nx.Graph()
 ls = r.keys('*')
 t = time.time()

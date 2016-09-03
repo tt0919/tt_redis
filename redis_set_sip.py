@@ -1,11 +1,12 @@
+# -*- coding: utf-8 -*
 #import sys
 #sys.path.append('/Redis/redis-2.6')
 import redis
 import time
 #sys.path.append()
-file=open('/program-file/tt/tt_pcap/src/main/resources/pcapAnaly.txt','r')
+#file=open('D:/BaiduYunDownload/data/new/1-ddostrace.from-victim.20070804_134936.txt','r')
 #print file.readline()
-#file=open('/Users/admin/Downloads/pcap_analysis-master/tt/src/main/resources/test1.txt','r')
+file=open('D:/program-file/tt/tt_pcap/src/main/resources/pcapAnaly.txt','r')
 
 r = redis.StrictRedis(host='localhost', port=6379, db=1)
 done=0
