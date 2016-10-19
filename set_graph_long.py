@@ -4,7 +4,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import time
 import numpy as np
-
+#说明：画长点的图--读库-1
 r = redis.Redis(host='127.0.0.1',port=6379,db=1)
 G = nx.Graph()
 ls = r.keys('*')

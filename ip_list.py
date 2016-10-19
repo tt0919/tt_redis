@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*
 import redis
 import time
-
+#说明：读库-1/2写库-3/4
 r_write_sip = redis.StrictRedis(host='localhost', port=6379, db=3)
 r_write_dip = redis.StrictRedis(host='localhost', port=6379, db=4)
 r_read_sip = redis.StrictRedis(host='localhost', port=6379, db=1)

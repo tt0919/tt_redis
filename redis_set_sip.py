@@ -7,7 +7,7 @@ import time
 #file=open('D:/BaiduYunDownload/data/new/1-ddostrace.from-victim.20070804_134936.txt','r')
 #print file.readline()
 file=open('D:/program-file/tt/tt_pcap/src/main/resources/pcapAnaly.txt','r')
-
+#说明：集合方式存储在库-1中--写库-1
 r = redis.StrictRedis(host='localhost', port=6379, db=1)
 done=0
 t = time.time()

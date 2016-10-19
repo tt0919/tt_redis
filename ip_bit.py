@@ -5,7 +5,7 @@ import redis
 import time
 import networkx as nx
 window_len = 1000
-
+#说明：读库-0/3/4 写库-5/6
 r_sip_list = redis.StrictRedis(host='localhost', port=6379, db=3)
 r_dip_list = redis.StrictRedis(host='localhost', port=6379, db=4)
 r_flow = redis.StrictRedis(host='localhost', port=6379, db=0)

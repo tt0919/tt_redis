@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*
 import redis
+#说明：画超点的图--读库-1
 r_write_set = redis.StrictRedis(host='localhost', port=6379, db=7)
 r_write_bit = redis.StrictRedis(host='localhost', port=6379, db=8)
 rr = redis.StrictRedis(host='localhost', port=6379, db=9)

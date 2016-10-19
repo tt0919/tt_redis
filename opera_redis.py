@@ -3,6 +3,7 @@ import redis
 import time
 #sys.path.append()
 #file=open('D:/BaiduYunDownload/data/new/1-ddostrace.from-victim.20070804_134936.txt','r')
+#说明：将从pcsp文件中提取出来的地址对按照哈希的方式存储在库-0中--写库-0
 file=open('D:/program-file/tt/tt_pcap/src/main/resources/pcapAnaly.txt','r')
 r = redis.StrictRedis(host='localhost', port=6379, db=0)
 done=0
